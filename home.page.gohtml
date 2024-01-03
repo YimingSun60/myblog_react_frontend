@@ -1,28 +1,41 @@
 {{template "base" .}}
 {{define "css"}}
-    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet"/>
 {{end}}
 {{define "js"}}
     <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
 {{end}}
 
 {{define "content"}}
-<video
-        id="my-video"
-        class="video-js"
-        controls
-        preload="auto"
-        width="640"
-        height="360"
-        data-setup="{}"
->
-    <source src="/assets/home_usagi.mp4" type="video/mp4"/>
-    <p class="vjs-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a
-        web browser that
-        <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-        >
-    </p>
-</video>
+    <main>
+        <div class="container text-center px-4 pt-5">
+            <div class="row justify-content-center">
+                <h1 class="display-4">Welcome to Bocchi</h1>
+                <p class="lead">
+                    Bocchi is a personal website of Barry, Bocchi is my cat's name.
+                </p>
+            </div>
+            <div class="row justify-content-center pt-5">
+                <video
+                        id="my-video"
+                        class="video-js"
+                        controls
+                        preload="auto"
+                        width="640"
+                        height="360"
+                        data-setup="{}"
+                >
+                    <source src="/assets/home_usagi.mp4" type="video/mp4"/>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                        >supports HTML5 video</a
+                        >
+                    </p>
+                </video>
+            </div>
+        </div>
+    </main>
+
 {{end}}
